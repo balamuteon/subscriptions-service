@@ -5,6 +5,7 @@ import (
 
 	"subscription_service/internal/domain"
 )
+
 //go:generate mockgen -source=contract.go -destination=mock_test.go -package=subscription_test
 type repository interface {
 	Create(ctx context.Context, sub domain.Subscription) (string, error)
